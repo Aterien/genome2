@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>{{page.common_name}}</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="species.css">
+</head>
+<body>
+
+<div>
+    <h1 id = "header">{{ page.name }}</h1>
+<div>
+
+<div id = "page_container"> 
+    <aside id= "table_of_contents">
+            <h3>Contents</h2>
+            <ol>
+                <li><a href="#tax">Taxonomy</a></li>
+                <li><a href="#sequencing">Sequencencing</a></li>
+                <li><a href="#info">General information</a></li>
+            </ol>
+    </aside>
+
+    <main>
+        <div id= "image_outer">
+            <div id = "image_inner">
+                 <img src="{{ page.image }}" alt="{{ page.name }}" width="200">
+                 <p><small>{{ page.image_attribution }}</small></p>
+            </div>
+        </div>
+        <h2 id="tax">Taxonomy</h2>
+        <div id="taxonomy">
+            <p><strong>Order:</strong> {{ page.order.name }}</p>
+            <p><strong>Family:</strong> {{ page.family.name }}</p>
+        </div>
+
+        <h2 id="sequencing">Sequencing</h2>
+        <table border="1">
+
+            <tr>
+                <th>Datatype</th>
+                <th>Individual</th>
+                <th>Coverage</th>
+                <th>Download</th>
+            </tr>
+            {% for sample in page.samples %}
+            <tr>
+                <td>{{ sample.datatype }}</td>
+                <td>{{ sample.individual }}</td>
+                <td>{{ sample.coverage }}</td>
+                <td><a href="{{ sample.url }}">Link 🔗</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2 id="info">General information</h2>
+        <div id = "content">
+            {{ content }}
+        </div>
+    </main>
+</div>
+
+<div id="social-bar">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="Twitter">
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
+    </a>
+</div>
+</body>
+
+<footer>
+<p id="foot">Author: Mykyta Khrabust</p>
+</footer>
+</html>

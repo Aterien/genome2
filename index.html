@@ -1,0 +1,69 @@
+---
+title: "Animal Collection"
+---
+
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Main</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="table.css">
+</head>
+<body>
+
+<h1>Animal Collection</h1>
+<table border="1" >
+<thead>
+    <tr>
+        <th id = "image">Image</th>
+        <th>Name</th>
+        <th>Family</th>
+        <th>Order</th>
+        <th>Sequenced Resources</th>
+    </tr>
+</thead>
+<tbody>
+    {% for animal in site.species %}
+    <tr>
+        <td>    
+            <a href="{{ animal.url }}">
+                <img src="{{animal.image}}" alt="{{ animal.title }}" class = "im_link">
+            </a>
+            <br>
+            <small>{{ animal.image_attribution }}</small>
+        </td>
+        <td>
+            {{animal.common_name}} <br> <i>({{animal.name}})</i>
+        </td>
+        <td>{{animal.family.name}}</td>
+        <td>{{ animal.order.name }}</td>
+        <td>
+            {% assign methods = animal.samples | map: 'datatype' | uniq %}
+            {% if methods contains 'Bionano' %}
+                <strong id = "bionano">Bionano</strong> <br>
+            {% endif %}
+            {{ methods | size }}
+        </td>
+
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<div id="social-bar">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="Twitter">
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
+    </a>
+</div>
+
+</body>
+<footer>
+<p id="foot">Author: Mykyta Khrabust</p>
+</footer>
+</html> 
