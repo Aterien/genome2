@@ -40,7 +40,7 @@ title: "Animal Collection"
         <td>
             {% assign methods = animal.samples | map: 'datatype' | uniq %}
             {% if methods contains 'Bionano' %}
-                <strong id = "bionano">Bionano</strong> <br>
+                <strong class = "bionano">Bionano</strong> <br>
             {% endif %}
             {{ methods | size }}
         </td>
