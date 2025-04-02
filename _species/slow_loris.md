@@ -15,7 +15,7 @@ family:
   name: Lorisidae
 project: [ vgp ]
 layout: species
-image: /assets/img/nycticebus_coucang.jpg
+image: https://github.com/Aterien/genome2/tree/main/assets/img/nycticebus_coucang.jpg
 image_attribution: CC BY-SA 3.0 David Haring/Duke Lemur Center (Wikimedia)
 samples:
 - datatype: PacBio HiFi (subreads) 
