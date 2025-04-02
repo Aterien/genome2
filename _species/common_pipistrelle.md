@@ -16,7 +16,7 @@ individuals:
     sex: female
 project: [ bat1k, vgp ]
 layout: species
-image: https://aterien.github.io/genome2/assets/img/Pipistrellus_pipistrellus.jpg
+image: /assets/img/Pipistrellus_pipistrellus.jpg
 image_attribution: CC BY-SA 2.0, Gilles San Martin (flickr)
 samples:
   - datatype: PacBio CLR

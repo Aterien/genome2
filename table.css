@@ -1,55 +1,54 @@
 body {
   background-color: #eaecee;
-  font-family: 'Roboto', sans-serif;
-  --image_width: 150px;
   margin: 0;
 }
+
+.custom-navbar {
+    background-color: #0e6655 !important; /
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white !important; 
+}
+
+.custom-navbar .nav-link:hover {
+    color: #d4efdf !important; 
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: white; 
+}
+
+/*Nazwa gatunku*/
 i {
 color:  #0b5345 ;
 }
-h1 {
-    text-align: center;
-    background-color: #0e6655;
-    color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-top: 0px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-
-img {
-  border-radius: 8px;
-  width: var(--image_width);
-}
-
-/* Animacja */
-.im_link {
+/* Kartki */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
     transition: transform 0.2s ease-in-out;
 }
-.im_link:hover {
-    transform: scale(1.1); 
+
+.card:hover {
+    transform: scale(1.03);
 }
 
-table {
-    background-color: white;
-    text-align: center;
-    border-collapse: collapse;
-    width: 80%;
-    margin: 40px auto;
-    border: none;
-
+.card-img-top {
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
+
+
 .bionano {
     font-size:20px;
     padding: 8px;
     background-color: #e53c21;
     color: white;
     float: right;
-    margin: -60px -20px 0 0;
     border-radius: 8px;
 }
 
@@ -63,22 +62,12 @@ th {
     height: 50px;
 }
 
-#image {
-    width: 20%;
-}
-/* Wiersze, kolumny*/
-tr, td {
-    border-bottom: 1px solid lightgray;
-    padding: 8px;
-    border: none;
-}
-tr:nth-child(even) {background-color:  #e8f8f5 ;}
 
 
 /* Atrybucja pod obrazkiem*/
 small {
     display: block;
-    width: var(--image_width);
+    width: 300px;
     margin: 0 auto;
     color: #424949;
     font-size: 10px;
@@ -86,7 +75,7 @@ small {
     text-align: center;
 }
 
-/* Linki do serwisów */
+/* Linki do serwis�w */
 #social-bar {
     position: fixed;
     right: 0;
