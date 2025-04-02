@@ -58,7 +58,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             {% for specie_page in site.species %}
-                            <li><a class="dropdown-item" href="{{ specie_page.url }}">{{ specie_page.common_name }}</a></li>
+                            <li><a class="dropdown-item" href="/genome2{{ specie_page.url }}">{{ specie_page.common_name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
@@ -96,7 +96,7 @@
 
         <div id= "image_outer">
             <div id = "image_inner">
-                 <img src="https://aterien.github.io/genome2/assets/img/{{ page.image }}" alt="{{ page.name }}" width="200">
+                 <img src="/genome2/assets/img/{{ page.image }}" alt="{{ page.name }}" width="200">
                  <p><small>{{ page.image_attribution }}</small></p>
             </div>
         </div>
