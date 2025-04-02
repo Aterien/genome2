@@ -28,7 +28,7 @@ title: "Animal Collection"
                         </a>
                         <ul class="dropdown-menu">
                             {% for specie_page in site.species %}
-                            <li><a class="dropdown-item" href="{{genome2/specie_page.url }}">{{ specie_page.common_name }}</a></li>
+                            <li><a class="dropdown-item" href="genome2/{{specie_page.url }}">{{ specie_page.common_name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
@@ -48,7 +48,7 @@ title: "Animal Collection"
         {% for animal in site.species %}
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <a href="{{genome2/animal.url}}">
+                <a href="genome2/{{animal.url}}">
                     <img src="{{ animal.image }}" alt="{{ animal.title }}" class="card-img-top">
                 </a>
                 <div class="card-body">
