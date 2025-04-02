@@ -15,7 +15,7 @@ project: [ vgp ]
 
 layout: species
 
-image: https://github.com/Aterien/genome2/tree/main/assets/img/accipiter_gentilis.jpg
+image: assets/img/accipiter_gentilis.jpg
 image_attribution: CC BY-SA 2.0, Steve Garvie (wikimedia)
 samples:
   - datatype: PacBio HiFi 
