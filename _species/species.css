@@ -64,10 +64,10 @@ main {
 #toc-nav .nav-link.active {
     font-weight: bold;
     color: white; 
-    background-color: #1abc9c; 
-    border-radius: 8px; 
+    background-color: #1abc9c;     
     padding: 8px 12px;
     transition: background-color 0.3s ease-in-out;
+    border-radius: 8px; 
 }
 
 #table_of_contents ol {
