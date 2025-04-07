@@ -78,9 +78,9 @@
         <div id="movable_contents" class="sticky-top">
             <h3>Contents</h3>
             <nav id="toc-nav" class="nav flex-column">
-                <a class="nav-link" href="#tax">Taxonomy</a>
+                <a class="nav-link" href="#taxonomy">Taxonomy</a>
                 <a class="nav-link" href="#sequencing">Sequencing</a>
-                <a class="nav-link" href="#info">General information</a>
+                <a class="nav-link" href="#content">General information</a>
                 <a class="nav-link" href="#feedback">Feedback</a>                
             </nav>
         </div>
@@ -106,8 +106,8 @@
             <p><strong>Family:</strong> {{ page.family.name }}</p>
         </div>
 
-        <h2 id="sequencing">Sequencing</h2>
-        <table>
+        <h2>Sequencing</h2>
+        <table  id="sequencing">
             <tr>
                 <th>Datatype</th>
                 <th>Individual</th>
@@ -130,8 +130,9 @@
             {{ content }}
         </div>
 
-        <h2 id="feedback">Feedback</h2> 
-        <div class="text-center my-4">
+       
+        <div class="text-center my-4" id="feedback">
+         <h2>Feedback</h2> 
             <button type="button" class="btn feedback-btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                 What do you think?
             </button>
